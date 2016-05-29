@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-dgad"
+    id="cordova-plugin-adad"
     version="1.0.0">
 	
     <name>Cordova Adad plugin</name>
@@ -47,9 +47,9 @@
 		</config-file>
 
 				
-		<source-file src="src/android/MdDgad.jar" target-dir="libs" />
-		<source-file src="src/android/dgad-2.0.1.jar" target-dir="libs" />
-		<source-file src="res/layout/dgad_banner.xml" target-dir="res/layout" />
+		<source-file src="src/android/MdAdad.jar" target-dir="libs" />
+		<source-file src="src/android/adad-client-3.1.jar" target-dir="libs" />
+		<source-file src="res/layout/adad_banner.xml" target-dir="res/layout" />
 	</platform>
 	
 </plugin>
