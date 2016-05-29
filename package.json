@@ -1,0 +1,39 @@
+{
+  "name": "cordova-plugin-dgad",
+  "version": "1.0.0",
+  "description": "Show dgad video and fullscreen ads",
+  "cordova": {
+    "id": "cordova-plugin-dgad",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miladesign/cordova-plugin-dgad.git"
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "ad",
+    "dgad",
+    "monetisation",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+"devDependencies": {
+    "cordova": ">=3.0.0"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Milad Mohammadi",
+  "license": "dgad",
+  "bugs": {
+    "url": "https://github.com/miladesign/cordova-plugin-dgad/issues"
+  },
+  "homepage": "https://github.com/miladesign/cordova-plugin-dgad#readme"
+}

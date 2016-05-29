@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-dgad"
+    version="1.0.0">
+	
+    <name>Cordova Adad plugin</name>
+    <description>Show Adad Ads</description>
+    <author>Milad Mohammadi</author>	
+    <license>miladesign.ir</license>
+    <keywords>cordova,plugin,ad,adad,monetisation</keywords>
+    <repo>https://github.com/miladesign/cordova-plugin-adad</repo>
+    <issue>https://github.com/miladesign/cordova-plugin-adad/issues</issue>	
+	<engines>
+	    <engine name="cordova" version=">=3.0.0" />
+	</engines>
+ 	
+    <js-module src="www/adad.js">
+        <clobbers target="window.adad" />
+    </js-module>    
+    
+	<!-- android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="cordova">
+				<param name="android-package" value="ir.adad.cordova.AdadCordova"/>
+			</feature>
+		</config-file>
+
+		<config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+		</config-file>
+
+		<preference name="ADAD_TOKEN" default="ce73669623b8484aa1ddd72ddbcf38f0" />
+		<preference name="TEST_MODE" default="true" />
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity
+				android:name="ir.adad.client.AdadActivity"
+				android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+				android:theme="@android:style/Theme.Translucent"/> 
+			<meta-data
+				android:name="AdadToken"
+				android:value="$ADAD_TOKEN" />
+			<meta-data
+				android:name="AdadTestMode"
+				android:value="$TEST_MODE"/>
+		</config-file>
+
+				
+		<source-file src="src/android/MdDgad.jar" target-dir="libs" />
+		<source-file src="src/android/dgad-2.0.1.jar" target-dir="libs" />
+		<source-file src="res/layout/dgad_banner.xml" target-dir="res/layout" />
+	</platform>
+	
+</plugin>
