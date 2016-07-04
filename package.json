@@ -1,22 +1,22 @@
 {
-  "name": "cordova-plugin-dgad",
+  "name": "cordova-plugin-adad",
   "version": "1.0.0",
-  "description": "Show dgad video and fullscreen ads",
+  "description": "Show Adad Banner and Interstitial Ad",
   "cordova": {
-    "id": "cordova-plugin-dgad",
+    "id": "cordova-plugin-adad",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/miladesign/cordova-plugin-dgad.git"
+    "url": "git+https://github.com/miladesign/cordova-plugin-adad.git"
   },
   "keywords": [
     "cordova",
     "plugin",
     "ad",
-    "dgad",
+    "adad",
     "monetisation",
     "ecosystem:cordova",
     "cordova-android"
@@ -31,9 +31,9 @@
     }
   ],
   "author": "Milad Mohammadi",
-  "license": "dgad",
+  "license": "MilaDesign",
   "bugs": {
-    "url": "https://github.com/miladesign/cordova-plugin-dgad/issues"
+    "url": "https://github.com/miladesign/cordova-plugin-adad/issues"
   },
-  "homepage": "https://github.com/miladesign/cordova-plugin-dgad#readme"
+  "homepage": "https://github.com/miladesign/cordova-plugin-adad#readme"
 }

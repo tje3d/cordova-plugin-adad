@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-adad"
     version="1.0.0">
-    <name>Cordova Adad plugin</name>
-    <description>Show Adad Ads</description>
+    <name>Cordova Adad Plugin</name>
+    <description>Show Adad Banner and Interstitial Ad</description>
     <author>Milad Mohammadi</author>	
     <license>miladesign.ir</license>
     <keywords>cordova,plugin,ad,adad,monetisation</keywords>
