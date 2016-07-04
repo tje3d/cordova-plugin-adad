@@ -18,9 +18,6 @@
         <clobbers target="window.adad" />
     </js-module>    
 
-	<preference name="$ADAD_TOKEN_CODE" default="" />
-	<preference name="$ADAD_TEST_MODE" default="true" />
-	<preference name="$ADAD_LOG_MODE" default="false" />
 	
 	<!-- android -->
 	<platform name="android">
@@ -35,6 +32,10 @@
 			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/><!-- Optional -->
 		</config-file>
 
+		<preference name="ADAD_TOKEN_CODE" default="" />
+		<preference name="ADAD_TEST_MODE" default="true" />
+		<preference name="ADAD_LOG_MODE" default="false" />
+		
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 			<activity
     		android:name="ir.adad.client.AdadActivity"
