@@ -18,6 +18,10 @@
         <clobbers target="window.adad" />
     </js-module>    
 
+	<preference name="$ADAD_TOKEN_CODE" default="" />
+	<preference name="$ADAD_TOKEN_CODE" default="true" />
+	<preference name="$ADAD_LOG_MODE" default="false" />
+	
 	<!-- android -->
 	<platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
@@ -36,6 +40,9 @@
     		android:name="ir.adad.client.AdadActivity"
     		android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
     		android:theme="@android:style/Theme.Translucent"/>
+			<meta-data android:name="AdadToken" android:value="$ADAD_TOKEN_CODE" />
+			<meta-data android:name="AdadLogging" android:value="$ADAD_LOG_MODE"/>
+			<meta-data android:name="AdadTestMode" android:value="$ADAD_TOKEN_CODE" />
 		</config-file>
 
 		<source-file src="src/android/AdadAd.java" target-dir="src/ir/adad/cordova" />
