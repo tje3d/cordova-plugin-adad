@@ -19,7 +19,7 @@
     </js-module>    
 
 	<preference name="$ADAD_TOKEN_CODE" default="" />
-	<preference name="$ADAD_TOKEN_CODE" default="true" />
+	<preference name="$ADAD_TEST_MODE" default="true" />
 	<preference name="$ADAD_LOG_MODE" default="false" />
 	
 	<!-- android -->
@@ -42,7 +42,7 @@
     		android:theme="@android:style/Theme.Translucent"/>
 			<meta-data android:name="AdadToken" android:value="$ADAD_TOKEN_CODE" />
 			<meta-data android:name="AdadLogging" android:value="$ADAD_LOG_MODE"/>
-			<meta-data android:name="AdadTestMode" android:value="$ADAD_TOKEN_CODE" />
+			<meta-data android:name="AdadTestMode" android:value="$ADAD_TEST_MODE" />
 		</config-file>
 
 		<source-file src="src/android/AdadAd.java" target-dir="src/ir/adad/cordova" />
