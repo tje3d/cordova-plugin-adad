@@ -1,83 +1,103 @@
 module.exports = {
-
-    init: function () {
+	Position: {
+        TOP: 100,
+        BOTTOM: 101
+    },
+    setUp: function() {
+        cordova.exec(
+			function (result) {
+				console.log('setUp succeeded.');
+			},
+			null,
+            'AdadAd',
+            'setUp',
+            []
+        ); 
+    },
+    AddBanner: function(position) {
+        cordova.exec(
+			function (result) {
+				console.log('Banner Success.');
+			},
+			null,
+            'AdadAd',
+            'addBanner',
+            [position]
+        ); 
+    },
+    EnableBanner: function() {
+        cordova.exec(
+			function (result) {
+				console.log('Banner Enabled.');
+			},
+			null,
+            'AdadAd',
+            'enableBanner',
+            []
+        ); 
+    },
+    DisableBanner: function() {
+        cordova.exec(
+			function (result) {
+				console.log('Banner Disabled.');
+			},
+			null,
+            'AdadAd',
+            'disableBanner',
+            []
+        ); 
+    },
+    LoadInterstitial: function () {
         var self = this;
         cordova.exec(
-            function (result) {
-                console.log('setUp succeeded.' + result);
-
+             function (result) {
                 if (typeof result == "string") {
-                    //
-                    if (result == "onAdLoaded") {
+                    if (result == "onAdadAdLoaded") {
                         if (self.onAdLoaded) {
                             self.onAdLoaded();
                         }
                     }
-                    if (result == "onAdFailedToLoad") {
+                    if (result == "onAdadAdFailedToLoad") {
                         if (self.onAdFailedToLoad) {
                             self.onAdFailedToLoad();
                         }
                     }
-                    if (result == "onInterstitialAdDisplayed") {
+                    if (result == "onAdadInterstitialAdDisplayed") {
                         if (self.onInterstitialAdDisplayed) {
                             self.onInterstitialAdDisplayed();
                         }
                     }
-                    if (result == "onRemoveAdsRequested") {
+                    if (result == "onAdadRemoveAdsRequested") {
                         if (self.onRemoveAdsRequested) {
                             self.onRemoveAdsRequested();
                         }
                     }
-                    if (result == "onInterstitialClosed") {
+                    if (result == "onAdadInterstitialClosed") {
                         if (self.onInterstitialClosed) {
                             self.onInterstitialClosed();
                         }
 					}
+                    if (result == "onAdadMessageReceive") {
+                        if (self.onMessageReceive) {
+                            self.onMessageReceive();
+                        }
+					}
                 }
-                else {
-                    
-                }
+                console.log(result);
             },
             function (error) {
-                console.log('setUp failed.');
+                console.log('failed.');
             },
-            'AdadCordova',
-            'init',
+            'AdadAd',
+            'loadInterstitialAd',
             []
         );
     },
-    EnableBanner: function () {
+    ShowInterstitial: function () {
         cordova.exec(
             null,
             null,
-            'AdadCordova',
-            'EnableBanner',
-            []
-        );
-    },
-    DisableBanner: function () {
-        cordova.exec(
-            null,
-            null,
-            'AdadCordova',
-            'DisableBanner',
-            []
-        );
-    },
-    prepareInterstitialAd: function () {
-        cordova.exec(
-            null,
-            null,
-            'AdadCordova',
-            'prepareInterstitialAd',
-            []
-        );
-    },
-    showInterstitialAd: function () {
-        cordova.exec(
-            null,
-            null,
-            'AdadCordova',
+            'AdadAd',
             'showInterstitialAd',
             []
         );
@@ -86,5 +106,6 @@ module.exports = {
     onAdFailedToLoad: null,
     onInterstitialAdDisplayed: null,
     onRemoveAdsRequested: null,
+    onMessageReceive: null,
     onInterstitialClosed: null
 };

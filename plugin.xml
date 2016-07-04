@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-adad"
     version="1.0.0">
-	
     <name>Cordova Adad plugin</name>
     <description>Show Adad Ads</description>
     <author>Milad Mohammadi</author>	
@@ -14,42 +13,33 @@
 	<engines>
 	    <engine name="cordova" version=">=3.0.0" />
 	</engines>
- 	
+
     <js-module src="www/adad.js">
         <clobbers target="window.adad" />
     </js-module>    
-    
+
 	<!-- android -->
 	<platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
-			<feature name="cordova">
-				<param name="android-package" value="ir.adad.cordova.AdadCordova"/>
+			<feature name="AdadAd">
+				<param name="android-package" value="ir.adad.cordova.AdadAd"/>
 			</feature>
 		</config-file>
-
 		<config-file target="AndroidManifest.xml" parent="/*">
-			<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+			<uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/><!-- Optional -->
 		</config-file>
 
-		<preference name="ADAD_TOKEN" default="ce73669623b8484aa1ddd72ddbcf38f0" />
-		<preference name="TEST_MODE" default="true" />
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 			<activity
-				android:name="ir.adad.client.AdadActivity"
-				android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-				android:theme="@android:style/Theme.Translucent"/> 
-			<meta-data
-				android:name="AdadToken"
-				android:value="$ADAD_TOKEN" />
-			<meta-data
-				android:name="AdadTestMode"
-				android:value="$TEST_MODE"/>
+    		android:name="ir.adad.client.AdadActivity"
+    		android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+    		android:theme="@android:style/Theme.Translucent"/>
 		</config-file>
 
-				
-		<source-file src="src/android/MdAdad.jar" target-dir="libs" />
+		<source-file src="src/android/AdadAd.java" target-dir="src/ir/adad/cordova" />
 		<source-file src="src/android/adad-client-3.1.jar" target-dir="libs" />
-		<source-file src="res/layout/adad_banner.xml" target-dir="res/layout" />
 	</platform>
 	
 </plugin>
