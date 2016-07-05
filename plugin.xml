@@ -29,7 +29,6 @@
 		<config-file target="AndroidManifest.xml" parent="/*">
 			<uses-permission android:name="android.permission.INTERNET" />
 			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/><!-- Optional -->
 		</config-file>
 
 		<preference name="ADAD_TOKEN_CODE" default="" />
@@ -46,7 +45,7 @@
 			<meta-data android:name="AdadTestMode" android:value="$ADAD_TEST_MODE" />
 		</config-file>
 
-		<source-file src="src/android/AdadAd.java" target-dir="src/ir/adad/cordova" />
+		<source-file src="src/android/MilaDesignAdad.jar" target-dir="libs" />
 		<source-file src="src/android/adad-client-3.1.jar" target-dir="libs" />
 	</platform>
 	
