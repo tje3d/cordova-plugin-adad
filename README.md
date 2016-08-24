@@ -93,7 +93,7 @@ function onInterstitialClosed(){
 <a href="https://github.com/miladesign/cordova-plugin-adad/blob/master/example/index.html">Click to see!</a><br>
 
 ## Test ##
-You can run following test apk.
+You can run following test apk:<br>
 http://s2.picofile.com/file/8264956568/adad_cordova.apk.html
 
 ## Useful links ##
@@ -101,9 +101,8 @@ Cordova Plugins<br>
 http://miladesign.ir/cordova
 
 # Credite and donate #
-Created by: Milad Mohammadi
-Email: Rezagah.Milad@Gmail.com
-Web: http://miladesign.ir
-Telegram ID: @MilaDesign
-
+Created by: Milad Mohammadi<br>
+Email: Rezagah.Milad@Gmail.com<br>
+Web: http://miladesign.ir<br>
+Telegram ID: @MilaDesign<br>
 donate: http://miladesign.ir/donate
