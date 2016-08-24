@@ -39,7 +39,7 @@ https://build.phonegap.com/ - Apps - [specific project] - Update code - Zip file
 
 ### Construct2 ###
 Download construct2 plugin<br>
-https://miladesign.ir/adad-construct
+http://miladesign.ir/shop/adad-construct
 
 
 ## Use Plugin ##
