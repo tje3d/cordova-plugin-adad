@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Adad</title>
+    <style>
+        .bodyStyle {
+            font-size: 32px;
+        }
+    </style>
+    <script type="text/javascript" src="cordova.js"></script>
+</head>
+<body>
+    <script>
+        document.addEventListener("deviceready", function () {
+
+            window.adad.setUp();
+
+            //
+            window.adad.onAdLoaded = function () {
+                alert('onAdLoaded');
+            };
+            window.adad.onAdFailedToLoad = function () {
+                alert('onAdFailedToLoad');
+            };
+            window.adad.onInterstitialAdDisplayed = function () {
+                alert('onInterstitialAdDisplayed');
+            };
+            window.adad.onRemoveAdsRequested = function () {
+                alert('onRemoveAdsRequested');
+            };
+            window.adad.onMessageReceive = function () {
+                alert('onMessageReceive');
+            };
+            window.adad.onInterstitialClosed = function () {
+                alert('onInterstitialClosed');
+            };
+
+        }, false);
+        function showBannerBottom() {
+            window.adad.AddBanner(window.adad.Position.BOTTOM);
+            window.adad.EnableBanner();
+        }
+    </script>
+
+    <!-- static interstitial, video interstial -->
+    <p><button onclick="window.adad.LoadInterstitial();">LoadInterstitial</button></p>
+    <p><button onclick="window.adad.ShowInterstitial();">ShowInterstitial</button></p>
+    <p><button onclick="javascript: showBannerBottom();">showBannerBottom</button></p>
+    <p><button onclick="window.adad.DisableBanner();">DisableBanner</button></p>
+</body>
+</html>
