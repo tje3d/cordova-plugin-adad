@@ -31,7 +31,7 @@
 			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 		</config-file>
 
-		<preference name="ADAD_TOKEN_CODE" default="" />
+		<preference name="ADAD_TOKEN_CODE" default="__TOKEN__" />
 		<preference name="ADAD_TEST_MODE" default="true" />
 		<preference name="ADAD_LOG_MODE" default="false" />
 		
